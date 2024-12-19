@@ -1,7 +1,7 @@
 # DisableSubsForGameMiSide
 Мод, полностью отключающий субтитры в игре MiSide работающий через BepInEx 6.0.0-pre.2 .
 
-Пригодится для тех кто хочет полное погружение либо занять эдиты без субов.
+Пригодится для тех кто хочет полное погружение либо заснять эдиты без субов.
 
 # README.md
 - en [English](https://github.com/ve3xone/DisableSubsForGameMiSide/blob/main/README.en.md)
