@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <AssemblyName>DisableSubsForGameMiSide</AssemblyName>
-        <Product>Disables subtitles in the game MiSide</Product>
+        <Product>Disables subtitles in the game MiSide (by ve3xone 2024)</Product>
         <Version>1.0.0</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <LangVersion>latest</LangVersion>
@@ -13,6 +13,7 @@
             https://nuget.samboy.dev/v3/index.json
         </RestoreAdditionalProjectSources>
         <RootNamespace>DisableSubsForGameMiSide</RootNamespace>
+        <Company>by ve3xone 2024</Company>
     </PropertyGroup>
 
     <ItemGroup>
