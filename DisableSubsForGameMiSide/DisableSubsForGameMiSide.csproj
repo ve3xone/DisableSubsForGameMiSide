@@ -1,0 +1,280 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <AssemblyName>DisableSubsForGameMiSide</AssemblyName>
+        <Product>Disables subtitles in the game MiSide</Product>
+        <Version>1.0.0</Version>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <LangVersion>latest</LangVersion>
+        <RestoreAdditionalProjectSources>
+            https://api.nuget.org/v3/index.json;
+            https://nuget.bepinex.dev/v3/index.json;
+            https://nuget.samboy.dev/v3/index.json
+        </RestoreAdditionalProjectSources>
+        <RootNamespace>DisableSubsForGameMiSide</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.*" IncludeAssets="compile"/>
+        <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Assembly-CSharp">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\Assembly-CSharp.dll</HintPath>
+      </Reference>
+      <Reference Include="Assembly-CSharp-firstpass">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\Assembly-CSharp-firstpass.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppMono.Security">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\Il2CppMono.Security.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2Cppmscorlib">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\Il2Cppmscorlib.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSystem">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\Il2CppSystem.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSystem.Configuration">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\Il2CppSystem.Configuration.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSystem.Core">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\Il2CppSystem.Core.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSystem.Xml">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\Il2CppSystem.Xml.dll</HintPath>
+      </Reference>
+      <Reference Include="MagicaCloth">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\MagicaCloth.dll</HintPath>
+      </Reference>
+      <Reference Include="NaughtyAttributes.Core">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\NaughtyAttributes.Core.dll</HintPath>
+      </Reference>
+      <Reference Include="UIEffect">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UIEffect.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.AI.Navigation">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\Unity.AI.Navigation.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Burst">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\Unity.Burst.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Burst.Unsafe">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\Unity.Burst.Unsafe.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Collections">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\Unity.Collections.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Mathematics">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\Unity.Mathematics.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Postprocessing.Runtime">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\Unity.Postprocessing.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Timeline">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\Unity.Timeline.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AccessibilityModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.AccessibilityModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AIModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.AIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AndroidJNIModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.AndroidJNIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AnimationModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.AnimationModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AssetBundleModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.AssetBundleModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AudioModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.AudioModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ClothModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.ClothModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ClusterInputModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.ClusterInputModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ClusterRendererModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.ClusterRendererModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.CoreModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.CoreModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.CrashReportingModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.CrashReportingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.DirectorModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.DirectorModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.DSPGraphModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.DSPGraphModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.GameCenterModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.GameCenterModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.GIModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.GIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.GridModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.GridModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.HotReloadModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.HotReloadModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ImageConversionModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.ImageConversionModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.IMGUIModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.IMGUIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.InputLegacyModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.InputLegacyModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.InputModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.InputModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.JSONSerializeModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.JSONSerializeModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.LocalizationModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.LocalizationModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ParticleSystemModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.ParticleSystemModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.PerformanceReportingModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.PerformanceReportingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.Physics2DModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.Physics2DModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.PhysicsModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.PhysicsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ProfilerModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.ProfilerModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ScreenCaptureModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SharedInternalsModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.SharedInternalsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SpriteMaskModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.SpriteMaskModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SpriteShapeModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.SpriteShapeModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.StreamingModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.StreamingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SubstanceModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.SubstanceModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SubsystemsModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.SubsystemsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TerrainModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.TerrainModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TerrainPhysicsModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TextCoreFontEngineModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TextCoreTextEngineModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TextRenderingModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.TextRenderingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TilemapModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.TilemapModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TLSModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.TLSModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UI">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.UI.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UIElementsModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.UIElementsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UIElementsNativeModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.UIElementsNativeModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UIModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.UIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UmbraModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.UmbraModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UNETModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.UNETModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityAnalyticsModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityConnectModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.UnityConnectModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityCurlModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.UnityCurlModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityTestProtocolModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VehiclesModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.VehiclesModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VFXModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.VFXModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VideoModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.VideoModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VirtualTexturingModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.VirtualTexturingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VRModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.VRModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.WindModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.WindModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.XRModule">
+        <HintPath>..\..\..\..\Games\SteamLibrary\steamapps\common\MiSide\BepInEx\interop\UnityEngine.XRModule.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+</Project>
