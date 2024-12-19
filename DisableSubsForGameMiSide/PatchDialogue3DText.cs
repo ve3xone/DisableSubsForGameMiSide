@@ -39,7 +39,7 @@ internal static class PatchDialogue3DText
                     text2Object.GetComponent<UnityEngine.UI.Text>().enabled = false;
             }
             
-            Plugin.Log.LogDebug($"Dialogue_3DText создан: {__instance.name}, и сабы были отключены.");
+            Plugin.Log.LogDebug($"Create Dialogue_3DText: {__instance.name}, and the subs were disabled.");
         }
     }
 }
