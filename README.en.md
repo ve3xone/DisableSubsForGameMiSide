@@ -17,7 +17,7 @@ Will come in handy for those who want full immersion.
 
 4. Exit the game and go to the plugin installation guide.
 
-## Guide how to put the mod (aka plugin) (necessary for it to work)
+## Guide how to put the mod (aka plugin)
 
 1. [Download the latest release](https://github.com/ve3xone/DisableSubsForGameMiSide/releases)
 
